@@ -1,0 +1,19 @@
+/* for all odd number p element */
+.p-class {
+      background-color: rgb(242, 136, 155);
+      font-family: Verdana, "DejaVu Sans", sans-serif;
+}
+
+#two {
+      color: rgb(0,0,255);
+      font-size: 36px;
+}
+
+.p-class.three {
+      font-size: 24px;
+}
+
+#four {
+      background-color: rgb(0,255,0);
+      font-size: 24px;
+}
