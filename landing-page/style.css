@@ -1,0 +1,105 @@
+body {
+      background-image:linear-gradient(90deg, rgba(0,0,0,1) 28%, rgba(32,8,68,1) 75%);
+      font-family: 'Montserrat', sans-serif;
+      height: 100%;
+      margin: 0px;
+      padding: 0px;
+      display: flex;
+      flex-direction: column;
+}
+
+.navbar {
+      display: flex;
+      color: white;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0px 16px;
+      background-color: black;
+}
+
+a {
+      text-decoration: none;
+      padding: 16px;
+      font-weight: bold;
+      color: white;
+}
+
+.navbar ul{
+
+}
+
+.banner {
+      display: flex;
+      background: linear-gradient(90deg, rgba(0,0,0,1) 50%, rgba(32,8,68,1) 100%);
+      color: white;
+      flex: 1 1 200px;
+      justify-content: space-between;
+      flex-wrap: wrap;
+}
+
+.banner button{
+      color: #c7ccd4;
+      font-weight: bold;
+      background-color: black;
+      border-radius: 25px;
+      padding: 20px;
+      border: 2px solid #c7ccd4;
+}
+
+button:hover {
+      color: #f2f4f7;
+      background-color:#20252e80;
+      transform: scale(1.05) perspective(1px);
+      }
+
+.banner-head {
+      display: flex;
+      width:600px;
+      justify-content: center;
+      align-items:  center;
+      text-align: center;
+      margin: 100px 0px;
+
+}
+
+.banner-right img{
+      height: 450px;
+}
+
+.banner-right {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 50px;
+      margin: auto;
+}
+
+.banner-left {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      margin: auto;
+}
+
+.container {
+      color: white;
+      text-align: center;
+}
+
+.cards {
+      display: flex;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      gap: 10px;
+}
+
+.footer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      background-color: black;
+      padding: 50px 0px;
+}
+
