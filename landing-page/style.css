@@ -32,7 +32,7 @@ a {
       display: flex;
       background: linear-gradient(90deg, rgba(0,0,0,1) 50%, rgba(32,8,68,1) 100%);
       color: white;
-      flex: 1 1 200px;
+      flex: 1 1 auto;
       justify-content: space-between;
       flex-wrap: wrap;
 }
@@ -54,7 +54,6 @@ button:hover {
 
 .banner-head {
       display: flex;
-      width: auto;
       justify-content: center;
       align-items:  center;
       text-align: center;
