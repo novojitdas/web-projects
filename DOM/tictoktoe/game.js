@@ -1,36 +1,26 @@
-console.log("connected");
-// Restart button
+const boxes = document.querySelectorAll('td');
 const restartButton = document.querySelector('#button');
-// Check box
-const box = document.querySelectorAll('td');
-// Clear box
- function clearBoard (){
-   for (var i=0;i<box.length;i++)
-   {
-     box[i].textContent = '';
-   }
- }
 
- restartButton.addEventListener("click",clearBoard);
-// check box marker
-function marker()
-{
-  if(this.textContent === '')
-  {
-    this.textContent = 'X';
-  }
-  else if(this.textContent === 'X')
-  {
-    this.textContent = 'O';
-  }
-  else
-  {
-    this.textContent = '';
-  }
-}
-// For loop for add event listener for all boxes
-
-for(var i=0;i<box.length;i++)
-{
-  box[i].addEventListener("click",marker);
-}
+// clear boxes 
+restartButton.addEventListener("click", (event) =>{
+      for (let i=0;i<boxes.length;i++){
+            boxes[i].textContent = '';
+      }   
+});
+// game logic
+let flag = true;
+boxes.forEach(box =>{
+      box.addEventListener('click',(event) => {
+            console.log(box);
+            console.log(flag);
+            if((box.textContent === '') && (flag == true)){
+                  box.textContent = 'X';
+                  flag = false;
+            }
+            else if((box.textContent === '') && (flag == false)){
+                  box.textContent = 'O';
+                  flag = true;
+            }
+            
+      });
+});
