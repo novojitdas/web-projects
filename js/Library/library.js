@@ -1,6 +1,6 @@
 const button = document.querySelector('#button');
 const myLibrary = [];
-const tableHead = ["BOOK","AUTHOR","PAGES"];
+const tableHead = ["BOOK","AUTHOR","PAGES","DELETE"];
 
 button.addEventListener('click', (event) => {
       event.preventDefault();
@@ -31,9 +31,6 @@ button.addEventListener('click', (event) => {
 });
 
 // For Starting View
-const table = document.querySelector('#table');
-table.innerHTML = '';
-
 const tr = document.createElement('tr');
 
 tableHead.forEach( head =>{
@@ -50,17 +47,10 @@ function showBookList() {
       const table = document.querySelector('#table');
       table.innerHTML = '';
       
-      const tr = document.createElement('tr');
-      
-      tableHead.forEach( head =>{
-            const th = document.createElement('th');
-            th.textContent = head;
-            tr.appendChild(th);
-      });
       // appending th row into the table 
       table.appendChild(tr);
 
-      myLibrary.forEach( book =>{
+      myLibrary.forEach( (book,index) =>{
             const trBook = document.createElement('tr');
             
             const tdTitle = document.createElement('td');
@@ -75,6 +65,17 @@ function showBookList() {
             tdPages.textContent = book.pages;
             trBook.appendChild(tdPages);
 
+            const deleteButton = document.createElement('button');
+            deleteButton.textContent = 'Delete';
+            trBook.appendChild(deleteButton);
+
             table.appendChild(trBook);
+
+            deleteButton.addEventListener('click',(event) => {
+                  event.preventDefault();
+                  myLibrary.splice(index,1);
+                  showBookList();
+            });
+
       });
 }
