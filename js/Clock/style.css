@@ -1,0 +1,35 @@
+body {
+      margin: 0px;
+      padding: 0px;
+      height: 100%;
+      background-color: #27005D;
+}
+
+.navbar {
+      background: #9400FF;
+      color: white;
+      padding: 5px;
+      text-align: center;
+      margin-bottom: 20px;
+}
+
+.container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+}
+
+.button {
+      padding: 8px;
+      border-radius: 12px;
+      border: solid red 2px;
+      background: transparent;
+      color: white;
+}
+
+button:hover {
+      color: #f2f4f7;
+      background-color:#20252e80;
+      transform: scale(1.05) perspective(1px);
+      }
