@@ -24,6 +24,21 @@ newTaskButton.addEventListener('click',(event) =>{
      // adding new line afte every function call 
      notStarted.appendChild(document.createElement('br'));
 
+     /////////////////////
+     // CHECKBOX LOGIC //
+     ///////////////////
+
+     const checkBoxButton = document.querySelectorAll('input[type="checkbox"]'); 
+console.log(checkBoxButton);
+
+checkBoxButton.forEach(checkbox => {
+     checkbox.addEventListener('click',(event) =>{
+     console.log(event);
+     });
 });
+
+});
+
+
 
 // test
